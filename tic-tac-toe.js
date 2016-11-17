@@ -1,7 +1,9 @@
 // Write all your JavaScript code in this file!
 // You can use the namespace variable that's defined here.
 var namespace = "http://www.w3.org/2000/svg"
+var turn= "player1"
 function makeShape(){
+  if(turn== "player1"){
   var canvas = document.getElementById("game-board")
   var circle = document.createElementNS(namespace, "circle")
   circle.setAttribute("cx", 50)
@@ -9,7 +11,24 @@ function makeShape(){
   circle.setAttribute("r", 40)
   circle.setAttribute("fill","white")
   canvas.appendChild(circle)
+  turn="player2"
+
+} else {
+  function makePotato(){
+    var canvas = document.getElementById("game-board")
+    var potatoes = document.createElementNS(namespace, "rect")
+    potatoes.setAttribute("x", 50)
+    potatoes.setAttribute("y", 50)
+    potatoes.setAttribute("width", 50)
+    potatoes.setAttribute("height", 50)
+    potatoes.setAttribute("fill", "red")
+    canvas.appendChild(potatoes)
+    turn="player1"
 }
+}
+
+}
+
 function makeCircle(){
   var canvas = document.getElementById("game-board")
   var shapes = document.createElementNS(namespace, "circle")
@@ -76,9 +95,9 @@ function makeFood(){
 function makePizza(){
   var canvas = document.getElementById("game-board")
   var pizzas = document.createElementNS(namespace, "circle")
-  circle.setAttribute("cx", 50)
-  circle.setAttribute("cy", 250)
-  circle.setAttribute("r", 40)
-  circle.setAttribute("fill","white")
-  canvas.appendChild(circle)
+  pizzas.setAttribute("cx", 50)
+  pizzas.setAttribute("cy", 250)
+  pizzas.setAttribute("r", 40)
+  pizzas.setAttribute("fill","white")
+  canvas.appendChild(pizzas)
 }
