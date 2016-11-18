@@ -8,28 +8,27 @@ function makeShape(){
   var circle = document.createElementNS(namespace, "circle")
   circle.setAttribute("cx", 50)
   circle.setAttribute("cy", 50)
-  circle.setAttribute("r", 40)
+  circle.setAttribute("r", 35)
   circle.setAttribute("fill","white")
   canvas.appendChild(circle)
   turn="player2"
 
 } else {
-  function makePotato(){
-    var canvas = document.getElementById("game-board")
-    var potatoes = document.createElementNS(namespace, "rect")
-    potatoes.setAttribute("x", 50)
-    potatoes.setAttribute("y", 50)
-    potatoes.setAttribute("width", 50)
-    potatoes.setAttribute("height", 50)
-    potatoes.setAttribute("fill", "red")
-    canvas.appendChild(potatoes)
-    turn="player1"
+  var canvas = document.getElementById("game-board")
+  var potatoes = document.createElementNS(namespace, "rect")
+  potatoes.setAttribute("x", 13)
+  potatoes.setAttribute("y", 15)
+  potatoes.setAttribute("width", 75)
+  potatoes.setAttribute("height", 75)
+  potatoes.setAttribute("fill", "red")
+  canvas.appendChild(potatoes)
+  turn="player1"
 }
 }
 
-}
-
+var turn= "player1"
 function makeCircle(){
+  
   var canvas = document.getElementById("game-board")
   var shapes = document.createElementNS(namespace, "circle")
   shapes.setAttribute("cx", 150)
@@ -37,7 +36,19 @@ function makeCircle(){
   shapes.setAttribute("r", 40)
   shapes.setAttribute("fill","white")
   canvas.appendChild(shapes)
+
+  var canvas = document.getElementById("game-board")
+  var pop = document.createElementNS(namespace, "rect")
+  pop.setAttribute("x", 50)
+  pop.setAttribute("y", 50)
+  pop.setAttribute("width", 50)
+  pop.setAttribute("height", 50)
+  pop.setAttribute("fill", "red")
+  canvas.appendChild(pop)
+  turn="player1"
 }
+}
+
 function makeThing(){
   var canvas = document.getElementById("game-board")
   var things = document.createElementNS(namespace, "circle")
