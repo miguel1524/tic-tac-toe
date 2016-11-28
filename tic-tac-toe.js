@@ -28,28 +28,32 @@ function makeShape(){
 
 var turn= "player1"
 function makeCircle(){
-  
+  if(turn== "player1"){
   var canvas = document.getElementById("game-board")
   var shapes = document.createElementNS(namespace, "circle")
   shapes.setAttribute("cx", 150)
   shapes.setAttribute("cy", 50)
-  shapes.setAttribute("r", 40)
+  shapes.setAttribute("r", 35)
   shapes.setAttribute("fill","white")
   canvas.appendChild(shapes)
+  turn="player2"
 
+} else {
   var canvas = document.getElementById("game-board")
-  var pop = document.createElementNS(namespace, "rect")
-  pop.setAttribute("x", 50)
-  pop.setAttribute("y", 50)
-  pop.setAttribute("width", 50)
-  pop.setAttribute("height", 50)
-  pop.setAttribute("fill", "red")
-  canvas.appendChild(pop)
+  var tomatoes = document.createElementNS(namespace, "rect")
+  tomatoes.setAttribute("x", 113)
+  tomatoes.setAttribute("y", 15)
+  tomatoes.setAttribute("width", 75)
+  tomatoes.setAttribute("height", 75)
+  tomatoes.setAttribute("fill", "red")
+  canvas.appendChild(tomatoes)
   turn="player1"
 }
 }
 
+var turn= "player1"
 function makeThing(){
+  if(turn== "player1")
   var canvas = document.getElementById("game-board")
   var things = document.createElementNS(namespace, "circle")
   things.setAttribute("cx", 250)
